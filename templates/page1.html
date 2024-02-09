@@ -1,0 +1,27 @@
+<!-- page1.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+    <title>Page 1</title>
+</head>
+<body>
+    <h1>Enter Your Personal Details</h1>
+    <form method="post" action="{{ url_for('page1') }}">
+        <label for="name">Name:</label>
+        <input type="text" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="phone_number">Phone Number:</label>
+        <input type="tel" name="phone_number" required>
+        <br>
+        <br>
+        <input type="submit" value="Next">
+    </form>
+</body>
+</html>
